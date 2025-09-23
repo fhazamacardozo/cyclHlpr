@@ -88,3 +88,24 @@ app.post('/api/reports', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
+
+
+// In-memory mock training plans by userId
+const trainingPlans = {
+    'user1': {
+        '2025-09-08': { session: 'Endurance ride 2h', notes: 'Z2 focus' },
+        '2025-09-09': { session: 'Rest', notes: '' },
+        '2025-09-10': { session: 'Intervals 4x8min', notes: 'Z4, full recovery' }
+    },
+    'user2': {
+        '2025-09-08': { session: 'Tempo 1h', notes: '' },
+        '2025-09-09': { session: 'Endurance 90min', notes: 'Keep HR < 140' }
+    }
+};
+
+// GET /api/training-plan?userId=xxx
+app.get('/api/training-plan', (req, res) => {
+    const userId = req.query.userId || 'user1';
+    const plan = trainingPlans[userId] || {};
+    res.json(plan);
+});
