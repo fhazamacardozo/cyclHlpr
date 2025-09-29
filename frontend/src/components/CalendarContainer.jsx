@@ -14,7 +14,7 @@ function CalendarContainer() {
 
     useEffect(() => {
         setLoading(true);
-        apiGet('/training-plan?userId=user2')
+        apiGet('/training-plan/2')
             .then(plan => {
                 // Transforma el objeto recibido en array de sesiones
                 const sessionsArr = Object.entries(plan).map(([date, s]) => ({
