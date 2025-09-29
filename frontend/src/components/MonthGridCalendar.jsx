@@ -1,4 +1,4 @@
-import TrainingSessionCard from './TrainingSessionCard';
+import TrainingSessionCard from './ui/TrainingSessionCard';
 import { useNavigate } from 'react-router-dom';
 
 function getMonthMatrix(year, month) {
