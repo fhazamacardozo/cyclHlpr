@@ -19,7 +19,7 @@ function CalendarContainer() {
                 // Transforma el objeto recibido en array de sesiones
                 const sessionsArr = Object.entries(plan).map(([date, s]) => ({
                     date,
-                    plannedSession: s.session,
+                    sessionDescription: s.sessionDescription,
                     notes: s.notes,
                 }));
                 setSessions(sessionsArr);
