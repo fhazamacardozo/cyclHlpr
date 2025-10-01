@@ -2,62 +2,22 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "title": "TrainingReport",
     "type": "object",
-    "required": ["date", "plannedSession"],
+    "required": ["date", "sessionDescription"],
     "properties": {
         "date": { "type": "string", "format": "date" },
-        "plannedSession": { "type": "string" },
-        "completedSession": { "type": "string" },
-        "duration": { "type": "string" },
-        "tss": { "type": "number" },
-        "intensityFactor": { "type": "number" },
-        "avgHr": { "type": "number" },
-        "np": { "type": "number" },
-        "files": { "type": "array", "items": { "type": "string" } },
-        "execution": {
-        "type": "object",
-        "properties": {
-            "intervals": { "type": "string" },
-            "hitTargets": { "oneOf": [ { "type": "boolean" }, { "enum": ["adjusted"] } ] },
-            "cadence": { "type": "string" }
-        },
-        "additionalProperties": false
-        },
-        "physiology": {
-        "type": "object",
-        "properties": {
-            "legs": { "type": "string" },
-            "breathing": { "type": "string" },
-            "rpe": { "type": "number" },
-            "nutrition": { "type": "string" }
-        },
-        "additionalProperties": false
-        },
-        "mental": {
-        "type": "object",
-        "properties": {
-            "motivation": { "type": "string" },
-            "focus": { "type": "string" }
-        },
-        "additionalProperties": false
-        },
-        "recovery": {
-        "type": "object",
-        "properties": {
-            "sleepHours": { "type": "number" },
-            "sleepQuality": { "type": "string" },
-            "otherFactors": { "type": "string" }
-        },
-        "additionalProperties": false
-        },
-        "takeaways": {
-        "type": "object",
-        "properties": {
-            "strongest": { "type": "string" },
-            "weakest": { "type": "string" },
-            "adaptation": { "type": "string" }
-        },
-        "additionalProperties": false
-        }
+        "sessionDescription": { "type": "string" },
+        "sessionModified": { "type": "boolean" },
+        "sessionModification": { "type": "string" },
+        "nutrition": { "type": "string" },
+        "physicalFeelings": { "type": "string" },
+        "breathing": { "type": "string" },
+        "rpe": { "type": "string" },
+        "mentalFeelings": { "type": "string" },
+        "motivacion": { "type": "string" },
+        "enfoque": { "type": "string" },
+        "sleep": { "type": "string" },
+        "otherFactors": { "type": "string" },
+        "notes": { "type": "string" }
     },
     "additionalProperties": false
 }

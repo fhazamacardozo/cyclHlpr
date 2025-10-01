@@ -1,37 +1,41 @@
-// src/types.ts
+export const TRAINING_REPORT_INITIAL_STATE: TrainingReport = {
+    date: new Date().toISOString().slice(0, 10),
+    sessionDescription: '',
+    sessionModified: false,
+    sessionModification: '',
+    nutrition: '',
+    physicalFeelings: '',
+    breathing: '',
+    rpe: '',
+    mentalFeelings: '',
+    motivacion: '',
+    enfoque: '',
+    sleep: '',
+    otherFactors: '',
+    notes: '',
+};
 export interface TrainingReport {
-  date: string; // ISO date e.g. "2025-08-26"
-    plannedSession: string;
-    completedSession?: string;
-    duration?: string;
-    tss?: number;
-    intensityFactor?: number;
-    avgHr?: number;
-    np?: number;
-    files?: string[];     // file names or URLs
-    execution?: {
-        intervals?: string;
-        hitTargets?: boolean | "adjusted";
-        cadence?: string;
-    };
-    physiology?: {
-        legs?: string;
-        breathing?: string;
-        rpe?: number;
-        nutrition?: string;
-    };
-    mental?: {
-        motivation?: string;
-        focus?: string;
-    };
-    recovery?: {
-        sleepHours?: number;
-        sleepQuality?: string;
-        otherFactors?: string;
-    };
-    takeaways?: {
-        strongest?: string;
-        weakest?: string;
-        adaptation?: string;
-    };
+  // Datos de la Sesión
+    date: string; // ISO date e.g. "2025-08-26"
+    sessionDescription: string;
+    sessionModified: boolean;
+    sessionModification: string;
+    nutrition: string;
+
+    // Sensaciones Físicas
+    physicalFeelings: string;
+    breathing: string;
+    rpe: string;
+
+    // Mental
+    mentalFeelings: string;
+    motivacion: string;
+    enfoque: string;
+
+    // Recuperación y Contexto
+    sleep: string;
+    otherFactors: string;
+
+    // Notas / Observaciones
+    notes: string;
 }

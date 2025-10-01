@@ -2,37 +2,37 @@
 
 class TrainingReport {
     constructor({
+        id,
         date,
-        plannedSession,
-        completedSession,
-        duration,
-        tss,
-        intensityFactor,
-        avgHr,
-        np,
-        files,
-        execution,
-        physiology,
-        mental,
-        recovery,
-        takeaways,
-        id
+        sessionDescription,
+        sessionModified,
+        sessionModification,
+        nutrition,
+        physicalFeelings,
+        breathing,
+        rpe,
+        mentalFeelings,
+        motivacion,
+        enfoque,
+        sleep,
+        otherFactors,
+        notes
     }) {
         this.id = id;
         this.date = date;
-        this.plannedSession = plannedSession;
-        this.completedSession = completedSession;
-        this.duration = duration;
-        this.tss = tss;
-        this.intensityFactor = intensityFactor;
-        this.avgHr = avgHr;
-        this.np = np;
-        this.files = files;
-        this.execution = execution;
-        this.physiology = physiology;
-        this.mental = mental;
-        this.recovery = recovery;
-        this.takeaways = takeaways;
+        this.sessionDescription = sessionDescription;
+        this.sessionModified = sessionModified;
+        this.sessionModification = sessionModification;
+        this.nutrition = nutrition;
+        this.physicalFeelings = physicalFeelings;
+        this.breathing = breathing;
+        this.rpe = rpe;
+        this.mentalFeelings = mentalFeelings;
+        this.motivacion = motivacion;
+        this.enfoque = enfoque;
+        this.sleep = sleep;
+        this.otherFactors = otherFactors;
+        this.notes = notes;
     }
 }
 
